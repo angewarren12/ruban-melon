@@ -153,17 +153,20 @@ function MainApp() {
 
                 {/* Header */}
                 <header className="kbc-header">
-                    <div className="kbc-header-item">
-                        <svg viewBox="0 0 24 24"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"></path></svg>
-                        {t.apps}
-                    </div>
-                    <div className="kbc-header-item">
-                        <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
-                        {t.menu}
-                    </div>
-                    <div className="kbc-header-item">
-                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"></path></svg>
-                        {t.help}
+                    <Logo className="kbc-logo-overlay" />
+                    <div className="kbc-header-items">
+                        <div className="kbc-header-item">
+                            <svg viewBox="0 0 24 24"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"></path></svg>
+                            {t.apps}
+                        </div>
+                        <div className="kbc-header-item">
+                            <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+                            {t.menu}
+                        </div>
+                        <div className="kbc-header-item">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"></path></svg>
+                            {t.help}
+                        </div>
                     </div>
                 </header>
 
@@ -237,9 +240,9 @@ function MainApp() {
                                     <div className="reader-item">
                                         <span className="reader-item-label">{t.pressOn}</span>
                                         <div className="reader-item-content">
-                                            <button className="login-badge">LOGIN</button>
+                                            <span className="login-badge">LOGIN</span>
                                             <span>+</span>
-                                            <button className="login-badge">LOGIN</button>
+                                            <span className="login-badge">LOGIN</span>
                                         </div>
                                     </div>
                                     <div className="reader-item">
@@ -247,7 +250,7 @@ function MainApp() {
                                         <div className="reader-item-content">
                                             <span className="code-display">9427 3282</span>
                                             <span>+</span>
-                                            <button className="ok-badge">OK</button>
+                                            <span className="ok-badge">OK</span>
                                         </div>
                                     </div>
                                     <div className="reader-item">
@@ -255,7 +258,7 @@ function MainApp() {
                                         <div className="reader-item-content">
                                             <span className="code-display">PIN</span>
                                             <span>+</span>
-                                            <button className="ok-badge">OK</button>
+                                            <span className="ok-badge">OK</span>
                                         </div>
                                     </div>
                                 </div>
@@ -265,15 +268,17 @@ function MainApp() {
                                     <span>{t.step3Title}</span>
                                 </div>
                                 <div className="connection-code-container">
-                                    <input
-                                        type="text"
-                                        className="connection-code-input"
-                                        placeholder="____ ____"
-                                        maxLength="9"
-                                        value={loginData.connectionCode}
-                                        onChange={(e) => setLoginData({ ...loginData, connectionCode: e.target.value })}
-                                    />
-                                    <button className="connect-button" onClick={handleConnect}>{t.connectButton}</button>
+                                    <div className="connection-code-row">
+                                        <input
+                                            type="text"
+                                            className="connection-code-input"
+                                            placeholder="____ ____"
+                                            maxLength="9"
+                                            value={loginData.connectionCode}
+                                            onChange={(e) => setLoginData({ ...loginData, connectionCode: e.target.value })}
+                                        />
+                                        <button className="connect-button" onClick={handleConnect}>{t.connectButton}</button>
+                                    </div>
                                 </div>
                             </div>
                         </>
