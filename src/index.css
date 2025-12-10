@@ -56,28 +56,20 @@ body {
     flex-direction: column;
   }
 
-  /* Unwrap content-panel so header and main become direct flex children */
-  .kbc-content-panel {
-    display: contents;
-  }
-
   .kbc-image-panel {
     display: block;
     width: 100%;
     height: 200px;
     min-height: 200px;
     order: 1;
-    /* Image entre header et main */
   }
 
   .kbc-header {
     order: 0;
-    /* Header en premier */
   }
 
   .kbc-main {
     order: 2;
-    /* Main content en dernier */
   }
 }
 
@@ -89,14 +81,6 @@ body {
   height: 48px;
   color: white;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-}
-
-.kbc-content-panel {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  position: relative;
 }
 
 /* ============================================
